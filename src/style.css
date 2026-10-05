@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap');
+
+:root {
+  --ink: #101318;
+  --muted: #69707d;
+  --surface: #ffffff;
+  --soft: #f5f6f8;
+  --line: #e6e8ec;
+  --yellow: #ffc400;
+  --dark: #11151b;
+  --radius: 18px;
+}
+
+* { box-sizing: border-box; scroll-behavior: smooth; }
+body { margin: 0; font-family: "DM Sans", sans-serif; color: var(--ink); background: var(--surface); transition: .3s ease; }
+h1,h2,h3,h4,h5,.navbar-brand { font-family: "Manrope", sans-serif; }
+a { text-decoration: none; }
+.btn { border-radius: 10px; }
+.form-control,.form-select { min-height: 48px; border-radius: 10px; border-color: var(--line); }
+.form-control:focus,.form-select:focus { border-color: var(--yellow); box-shadow: 0 0 0 .2rem rgba(255,196,0,.15); }
+
+.nav-glass { background: rgba(12,15,19,.86); backdrop-filter: blur(15px); padding: 14px 0; }
+.navbar-brand { font-size: 1.45rem; color: #fff !important; letter-spacing: -.5px; }
+.navbar-brand > span:last-child, .footer-brand > span { color: var(--yellow); }
+.brand-icon { display: inline-grid; place-items: center; width: 34px; height: 34px; background: var(--yellow); color: #111; border-radius: 9px; }
+.nav-link { color: rgba(255,255,255,.75) !important; font-weight: 500; }
+.nav-link:hover { color: #fff !important; }
+.icon-btn { border: 1px solid rgba(255,255,255,.2); background: transparent; color: #fff; border-radius: 9px; width: 42px; height: 40px; }
+.nav-book-btn { color: #111; }
+
+.hero-section { min-height: 100vh; color: #fff; position: relative; overflow: hidden; background: #14181e url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=2000&q=85") center/cover; }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(5,7,10,.9) 0%, rgba(5,7,10,.66) 50%, rgba(5,7,10,.22) 100%); }
+.hero-section h1 { font-size: clamp(3rem, 6vw, 5.7rem); line-height: 1.02; letter-spacing: -3px; max-width: 800px; }
+.hero-section h1 span { color: var(--yellow); }
+.hero-copy { max-width: 620px; color: rgba(255,255,255,.75); font-size: 1.12rem; line-height: 1.7; margin: 24px 0 32px; }
+.eyebrow { display: inline-flex; gap: 8px; align-items: center; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; font-size: .74rem; color: var(--yellow); }
+.eyebrow.dark { color: #9b6e00; }
+.hero-stats { display: flex; gap: 42px; }
+.hero-stats div { display: flex; flex-direction: column; }
+.hero-stats strong { font: 700 1.45rem "Manrope"; }
+.hero-stats small { color: rgba(255,255,255,.6); }
+
+.section-pad { padding: 100px 0; }
+.cars-section { background: var(--surface); }
+.section-heading h2 { font-size: clamp(2.2rem,4vw,3.4rem); letter-spacing: -1.8px; margin: 8px 0 10px; }
+.section-heading p { color: var(--muted); max-width: 620px; margin-bottom: 0; }
+.results-count { color: var(--muted); font-size: .9rem; white-space: nowrap; }
+
+.filter-box { background: var(--soft); border: 1px solid var(--line); padding: 22px; border-radius: var(--radius); margin: 36px 0 28px; }
+.form-label { font-weight: 600; font-size: .85rem; margin-bottom: 7px; }
+.input-icon { position: relative; }
+.input-icon i { position: absolute; left: 15px; top: 15px; color: var(--muted); }
+.input-icon input { padding-left: 42px; }
+
+.car-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; transition: .25s ease; box-shadow: 0 8px 30px rgba(15,20,30,.04); }
+.car-card:hover { transform: translateY(-6px); box-shadow: 0 20px 45px rgba(15,20,30,.12); }
+.car-image-wrap { height: 235px; position: relative; overflow: hidden; background: #e9ebee; }
+.car-image { width: 100%; height: 100%; object-fit: cover; transition: .5s ease; }
+.car-card:hover .car-image { transform: scale(1.05); }
+.availability,.category-badge { position: absolute; top: 14px; padding: 7px 10px; border-radius: 30px; font-size: .72rem; font-weight: 700; }
+.availability { left: 14px; background: rgba(255,255,255,.94); }
+.availability i { color: #16a34a; font-size: .45rem; vertical-align: middle; }
+.category-badge { right: 14px; background: #111; color: #fff; }
+.rating { color: #c18b00; font-size: .84rem; font-weight: 600; }
+.rating i { color: #ffb800; }
+.price { font: 800 1.25rem "Manrope"; }
+.car-specs { display: flex; gap: 12px; flex-wrap: wrap; color: var(--muted); font-size: .8rem; }
+.car-specs span { display: inline-flex; gap: 5px; align-items: center; }
+
+.detail-section { background: var(--soft); }
+.detail-card { overflow: hidden; border-radius: 24px; background: var(--surface); box-shadow: 0 20px 60px rgba(15,20,30,.08); }
+.detail-image { width: 100%; height: 100%; min-height: 440px; object-fit: cover; }
+.detail-card p { color: var(--muted); line-height: 1.7; }
+.detail-specs { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 25px; }
+.detail-specs > div { display: flex; gap: 12px; align-items: center; padding: 14px; border: 1px solid var(--line); border-radius: 12px; }
+.detail-specs i { font-size: 1.3rem; color: #b27b00; }
+.detail-specs span { color: var(--muted); font-size: .75rem; display: flex; flex-direction: column; }
+.detail-specs strong { color: var(--ink); font-size: .92rem; }
+
+.about-section { background: var(--soft); }
+.lead { color: var(--muted); line-height: 1.75; }
+.feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-top: 35px; }
+.feature-grid i { color: #ad7800; font-size: 1.5rem; }
+.feature-grid h4 { font-size: 1rem; margin: 10px 0 4px; }
+.feature-grid p { font-size: .86rem; color: var(--muted); margin: 0; line-height: 1.5; }
+.about-visual { position: relative; padding: 15px; }
+.about-visual img { width: 100%; height: 480px; object-fit: cover; border-radius: 24px; }
+.floating-card { position: absolute; bottom: 35px; left: -5px; background: #fff; padding: 18px 22px; border-radius: 14px; box-shadow: 0 15px 40px rgba(0,0,0,.16); display: flex; flex-direction: column; }
+.floating-card strong { font-size: 1.5rem; }
+.floating-card span { color: var(--muted); font-size: .78rem; }
+
+.booking-section { background: var(--surface); }
+.booking-form { background: var(--soft); padding: 30px; border-radius: 20px; border: 1px solid var(--line); }
+.booking-perks { display: flex; flex-direction: column; gap: 13px; margin-top: 30px; color: var(--muted); }
+.booking-perks i { color: #159947; margin-right: 9px; }
+
+.booking-history-section { background: var(--soft); }
+.empty-bookings { text-align: center; border: 1px dashed #cbd0d7; border-radius: 20px; padding: 60px 20px; margin-top: 30px; background: var(--surface); }
+.empty-icon { display: inline-grid; place-items: center; width: 60px; height: 60px; border-radius: 50%; background: var(--soft); font-size: 1.5rem; margin-bottom: 15px; }
+.empty-bookings p { color: var(--muted); }
+.booking-item { display: flex; justify-content: space-between; gap: 20px; padding: 22px; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; }
+.booking-id { font-size: .7rem; font-weight: 700; color: #a37200; letter-spacing: 1px; margin-bottom: 7px; }
+.booking-item h3 { font-size: 1.1rem; margin-bottom: 8px; }
+.booking-item p { color: var(--muted); font-size: .83rem; }
+
+.footer { background: #0f1318; color: rgba(255,255,255,.62); padding: 75px 0 25px; }
+.footer-brand { color: #fff; font: 800 1.6rem "Manrope"; }
+.footer h5 { color: #fff; font-size: .95rem; margin-bottom: 18px; }
+.footer a:not(.footer-brand) { display: block; color: rgba(255,255,255,.6); margin-bottom: 10px; font-size: .86rem; }
+.footer a:hover { color: #fff; }
+.footer p { font-size: .86rem; line-height: 1.7; }
+.socials { display: flex; gap: 10px; }
+.socials a { width: 38px; height: 38px; display: grid !important; place-items: center; border: 1px solid rgba(255,255,255,.15); border-radius: 10px; }
+.footer hr { border-color: rgba(255,255,255,.1); margin: 45px 0 20px; }
+
+.toast-message { position: fixed; right: 22px; bottom: 22px; z-index: 2000; background: #151a20; color: #fff; padding: 15px 17px; border-radius: 14px; box-shadow: 0 15px 45px rgba(0,0,0,.3); display: flex; align-items: center; gap: 12px; min-width: 310px; animation: slideIn .3s ease; }
+.toast-message > i { color: #45d483; font-size: 1.5rem; }
+.toast-message div { display: flex; flex-direction: column; }
+.toast-message span { color: rgba(255,255,255,.7); font-size: .78rem; }
+.toast-message button { margin-left: auto; border: 0; background: transparent; color: #fff; }
+
+@keyframes slideIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+.dark-mode { --surface: #171b21; --soft: #101419; --ink: #f3f4f6; --muted: #aab1bc; --line: #2a3039; }
+.dark-mode .navbar-brand,.dark-mode .car-card h3,.dark-mode .detail-card h2,.dark-mode .feature-grid h4,.dark-mode .section-heading h2 { color: #fff; }
+.dark-mode .filter-box,.dark-mode .booking-form { background: #101419; }
+.dark-mode .form-control,.dark-mode .form-select { background: #171b21; color: #fff; border-color: #343b45; }
+.dark-mode .form-select option { background: #171b21; }
+.dark-mode .btn-outline-dark { color: #fff; border-color: #59616d; }
+.dark-mode .btn-outline-dark:hover { background: #fff; color: #111; }
+.dark-mode .detail-card,.dark-mode .floating-card { background: #171b21; }
+.dark-mode .detail-specs strong { color: #fff; }
+.dark-mode .empty-bookings { background: #171b21; }
+.dark-mode .booking-item { background: #171b21; }
+
+@media (max-width: 991px) {
+  .navbar-collapse { background: #11151b; padding: 15px; border-radius: 12px; margin-top: 10px; }
+  .hero-section { background-position: 65% center; }
+  .hero-section h1 { letter-spacing: -2px; }
+  .section-pad { padding: 75px 0; }
+}
+@media (max-width: 767px) {
+  .hero-section h1 { font-size: 3rem; }
+  .hero-copy { font-size: 1rem; }
+  .hero-stats { gap: 24px; }
+  .hero-stats strong { font-size: 1.15rem; }
+  .hero-stats small { font-size: .7rem; }
+  .filter-box { padding: 16px; }
+  .feature-grid { grid-template-columns: 1fr; }
+  .detail-specs { grid-template-columns: 1fr; }
+  .detail-image { min-height: 280px; }
+  .booking-form { padding: 20px; }
+  .toast-message { left: 15px; right: 15px; min-width: 0; }
+}
+@media (max-width: 420px) {
+  .hero-section h1 { font-size: 2.55rem; }
+  .hero-stats { gap: 16px; }
+}
